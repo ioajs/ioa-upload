@@ -1,6 +1,6 @@
 {
    "name": "ioa-upload",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "description": "ioa文件上传组件",
    "scripts": {
       "start": "node index.js",
