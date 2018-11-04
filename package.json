@@ -1,0 +1,24 @@
+{
+   "name": "ioa-upload",
+   "version": "0.0.2",
+   "description": "ioa文件上传组件",
+   "scripts": {
+      "start": "node index.js",
+      "dev": "node index.js",
+      "test": "jtf -w"
+   },
+   "dependencies": {
+      "busboy": "^0.2.14",
+      "ioa": "^4.4.2"
+   },
+   "author": "xiangle",
+   "license": "ISC",
+   "devDependencies": {
+      "axios": "^0.18.0",
+      "typea": "^4.4.0"
+   },
+   "files": [
+      "app",
+      "!app/node_modules"
+   ]
+}

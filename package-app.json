@@ -1,0 +1,6 @@
+{
+   "upload": {
+      "enable": true,
+      "path": "app"
+   }
+}
