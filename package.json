@@ -1,6 +1,6 @@
 {
    "name": "ioa-upload",
-   "version": "0.0.3",
+   "version": "0.1.0",
    "description": "ioa文件上传组件",
    "scripts": {
       "start": "node index.js",
@@ -9,7 +9,7 @@
    },
    "dependencies": {
       "busboy": "^0.2.14",
-      "ioa": "^4.4.2"
+      "ioa": "^4.5.1"
    },
    "author": "xiangle",
    "license": "ISC",

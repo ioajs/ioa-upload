@@ -9,7 +9,7 @@ const { auth } = apps
 
 test('upload', async t => {
 
-   let result = await axios.post(`/upload/user`)
+   let result = await axios.post(`/upload/user`, {})
 
    let { data, error } = typea.strict(result.data, {
       uid: Number,

@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-   port: 9900
+   "suffix": [
+      ".jpg",
+      ".png",
+      ".xml",
+      ".csv"
+   ]
 }
