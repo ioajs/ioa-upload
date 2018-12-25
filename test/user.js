@@ -3,7 +3,7 @@
 const test = require('jtf')
 const typea = require('typea')
 const { apps } = require('ioa')
-const { axios } = require('./helpers/axios')
+const { axios } = require('./helpers/')
 
 const { auth } = apps
 

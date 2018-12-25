@@ -1,6 +1,6 @@
 'use strict';
 
-const { config, cwd } = require('ioa');
+const { config, cwd } = require('@app');
 const fs = require('fs-extra');
 const Busboy = require('busboy');
 
