@@ -4,10 +4,10 @@ const { config, cwd } = require('@app');
 const fs = require('fs-extra');
 const Busboy = require('busboy');
 
-let basePath = `${cwd}/static`
+let basePath = `${cwd}/static`;
 
 if (config.savePath) {
-   basePath = config.savePath
+   basePath = config.savePath;
 }
 
 module.exports = async function (ctx, next) {

@@ -8,8 +8,9 @@
       "test": "jtf -w"
    },
    "dependencies": {
+      "@ioa/http": "0.0.7",
       "busboy": "^0.2.14",
-      "ioa": "^5.0.0"
+      "ioa": "^6.0.0-alpha.4"
    },
    "author": "xiangle",
    "license": "ISC",

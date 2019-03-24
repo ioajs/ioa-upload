@@ -1,6 +1,6 @@
 'use strict';
 
-class index {
+class Upload {
    async upload(ctx) {
 
       ctx.body = {
@@ -10,4 +10,4 @@ class index {
    }
 }
 
-module.exports = index 
+module.exports = Upload 
