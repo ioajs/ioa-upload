@@ -1,5 +1,5 @@
 {
-   "name": "ioa-upload",
+   "name": "@ioa/upload",
    "version": "5.0.0",
    "description": "ioa文件上传组件",
    "scripts": {
@@ -10,7 +10,7 @@
    "dependencies": {
       "@ioa/http": "0.0.7",
       "busboy": "^0.2.14",
-      "ioa": "^6.0.0-alpha.4"
+      "ioa": "^7.0.0-alpha.2"
    },
    "author": "xiangle",
    "license": "ISC",
