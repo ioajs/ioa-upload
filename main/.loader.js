@@ -1,7 +1,7 @@
 'use strict';
 
-const { options } = require('@app');
+const { levels } = require('@app');
 
 module.exports = {
-   ...options
+   ...levels
 }

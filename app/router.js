@@ -1,7 +1,5 @@
 'use strict';
 
-const { router, middleware } = require('@app');
+const { router, } = require('@app');
 
-const { role, upload } = middleware;
-
-router.post('/upload/:category', upload, 'upload.upload');
+router.post('/upload/:category', "upload", 'upload.upload');

@@ -1,15 +1,17 @@
 'use strict';
 
 module.exports = {
-   "port": 9800,
-   "@apps": {
-      "app": {
+   "components": {
+      "@ioa/http": {
+         "port": 9800,
+      },
+      "./app": {
          "suffix": [
             ".jpg",
             ".png",
             ".xml",
             ".csv"
          ]
-      }
-   }
+      },
+   },
 }

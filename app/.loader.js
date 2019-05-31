@@ -1,11 +1,5 @@
 'use strict';
 
-const { levels } = require('@app');
+const levels = require('ioa-router/lib/levels.js');
 
-const { controller, middleware, router } = levels;
-
-module.exports = {
-   controller,
-   middleware,
-   router
-}
+module.exports = levels;

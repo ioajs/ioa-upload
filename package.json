@@ -1,6 +1,6 @@
 {
    "name": "@ioa/upload",
-   "version": "5.0.0",
+   "version": "7.0.0",
    "description": "ioa文件上传组件",
    "scripts": {
       "start": "node index.js",
@@ -8,15 +8,15 @@
       "test": "jtf -w"
    },
    "dependencies": {
-      "@ioa/http": "0.0.7",
+      "@ioa/http": "^7.0.0-alpha.6",
       "busboy": "^0.2.14",
-      "ioa": "^7.0.0-alpha.2"
+      "ioa": "^7.0.2"
    },
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
       "axios": "^0.18.0",
-      "typea": "^4.4.0"
+      "typea": "^4.4.4"
    },
    "files": [
       "app",

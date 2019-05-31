@@ -18,68 +18,79 @@ module.exports = async function (ctx, next) {
 
    const busboy = new Busboy({ headers: ctx.headers });
 
-   const date = new Date()
+   const date = new Date();
 
-   const relativePath = `${category}/${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}/`
+   const relativePath = `${category}/${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}/`;
 
-   const absolutePath = `${basePath}/${relativePath}`
+   const absolutePath = `${basePath}/${relativePath}`;
 
-   await fs.ensureDir(absolutePath)
+   await fs.ensureDir(absolutePath);
 
-   const transaction = []
-   const random = String(Math.random()).slice(-5)
+   const transaction = [];
+   const random = String(Math.random()).slice(-5);
 
-   let state
-   const promise = new Promise((resolve, reject) => state = { resolve, reject })
+   const state = {};
+   const promise = new Promise((resolve, reject) => {
+      state.resolve = resolve;
+      state.reject = reject;
+   })
 
    // 文件类型
    busboy.on('file', function (fieldname, readableStream, filename) {
-      const [, name, suffix] = filename.match(/^(.+)(\..+)$/)
+
+      const [, name, suffix] = filename.match(/^(.+)(\..+)$/);
+
       if (config.suffix.includes(suffix)) {
-         filename = `${name}_${random}${suffix}`
-         data.files.push(relativePath + filename)
-         const writeStream = fs.createWriteStream(absolutePath + filename)
+
+         filename = `${name}_${random}${suffix}`;
+         data.files.push(relativePath + filename);
+         const writeStream = fs.createWriteStream(absolutePath + filename);
+
          // 绑定可写流到可读流
-         readableStream.pipe(writeStream)
-         transaction.push(writeStream)
+         readableStream.pipe(writeStream);
+         transaction.push(writeStream);
+
       } else {
+
          state.reject({
             "code": 1000,
-            "msg":`不支持${suffix}文件类型`
+            "msg": `不支持${suffix}文件类型`
          })
+
       }
+
    })
 
    // 字段类型
    busboy.on('field', function (fieldname, value) {
-      data[fieldname] = value
+      data[fieldname] = value;
    })
 
    busboy.on('finish', state.resolve)
 
-   // 上传失败时删除所有写入流
+   // 上传失败（中断）时删除所有写入流
    ctx.req.on('error', function () {
       for (const item of transaction) {
-         item.destroy()
+         item.destroy();
       }
       state.reject({
          "code": 1000,
-         "msg":`上传失败`
+         "msg": `上传失败`
       })
    })
 
    // 绑定可写流到可读流
-   ctx.req.pipe(busboy)
+   ctx.req.pipe(busboy);
 
    await promise.then(async function () {
 
-      ctx.request.body = data
+      ctx.request.body = data;
 
-      await next()
+      await next();
 
    }).catch(function (error) {
 
-      ctx.body = error
+      ctx.body = { error };
 
    })
 

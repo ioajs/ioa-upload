@@ -10,4 +10,4 @@ class Upload {
    }
 }
 
-module.exports = Upload 
+module.exports = Upload;
