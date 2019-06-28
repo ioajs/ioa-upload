@@ -6,10 +6,10 @@ ioa.loader({
    "./main": {
       "enable": true,
       "components": {
-         '@ioa/http': {
+         '@ioa/koa': {
             "enable": true,
          },
-         "./app": {
+         "./lib": {
             "enable": true,
          }
       },
