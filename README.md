@@ -19,7 +19,7 @@
 
 * `whitelist` *Array* 允许上传的文件类型白名单，默认支持.jpg、.png格式
 
-* `savePath` *String* 文件保存绝对路径，默认保存至当前应用的/static目录下
+* `savePath` *String* 文件保存绝对路径，默认保存至当前应用的/static目录下，末尾不带/
 
 * `limits` *Object* 文件上传限制，请参照[Busboy](https://github.com/mscdex/busboy#busboy-methods)项目
 
