@@ -11,11 +11,13 @@ module.exports = {
          <body>
             <form method="POST" enctype="multipart/form-data" action="/upload/test">
                <br/>
-               <input type="text" name="username">
+               用户名：<input type="text" name="username">
                <br/><br/>
-               <input type="text" name="age">
+               年　龄：<input type="text" name="age">
                <br/><br/>
-               <input type="file" name="filefield" multiple>
+               头　像：<input type="file" name="headPortrait">
+               <br/><br/>
+               附　件：<input type="file" name="annex" multiple> (多选)
                <br/><br/>
                <input type="submit">
             </form>

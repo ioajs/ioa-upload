@@ -6,11 +6,12 @@ module.exports = {
    },
    "lib": {
       // "savePath": "D:/Nodejs/Project/ioa/@ioa-upload/xxxx",
-      "suffixs": [
+      "whitelist": [
          ".jpg",
          ".png",
          ".xml",
          ".csv"
-      ]
+      ],
+      "limits": {}
    },
 }

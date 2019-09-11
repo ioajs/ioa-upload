@@ -2,43 +2,40 @@
 
 基于[busboy](https://github.com/mscdex/busboy)模块Stream方式的多文件上传组件，支持多文件、参数混合提交
 
+接受html form表单或new FormData()实例类型的数据
 
-### 中间件
-
-#### upload
+### middleware.upload
 
 文件上传中间件
 
-##### ctx输出
+### ctx.upload输出
 
-* `ctx.body`
+* `files` *Array* 上传成功后的文件资源路径
 
-   * `files` *Array* 上传成功后的文件资源路径
-
-   * `$name` * 自定义非文件类型数据字段
+* `fields` *Object* field字段
 
 
 ### 配置
 
-* `suffix` *Array* 允许上传的文件类型，默认支持.jpg、.png、.xml、.csv格式
+* `whitelist` *Array* 允许上传的文件类型白名单，默认支持.jpg、.png格式
 
 * `savePath` *String* 文件保存绝对路径，默认保存至当前应用的/static目录下
+
+* `limits` *Object* 文件上传限制，请参照[Busboy](https://github.com/mscdex/busboy#busboy-methods)项目
 
 #### 默认配置
 
 ```js
 {
-   "suffix": [
+   "whitelist": [
       ".jpg",
-      ".png",
-      ".xml",
-      ".csv"
+      ".png"
    ]
 }
 ```
 
 
-### API
+### API参数
 
 #### `POST` /upload/:category
 
