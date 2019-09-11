@@ -11,7 +11,7 @@
 
 ##### ctx输出
 
-* `ctx.request.body`
+* `ctx.body`
 
    * `files` *Array* 上传成功后的文件资源路径
 

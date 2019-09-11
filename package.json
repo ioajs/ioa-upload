@@ -1,6 +1,6 @@
 {
    "name": "@ioa/upload",
-   "version": "8.0.2",
+   "version": "9.4.0",
    "description": "ioa文件上传组件",
    "scripts": {
       "start": "node index.js",
@@ -13,9 +13,10 @@
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
-      "@ioa/koa": "^8.0.0",
+      "@ioa/koa": "^9.4.0",
       "axios": "^0.18.1",
-      "ioa": "^8.0.0",
+      "form-data": "^2.5.1",
+      "ioa": "^9.4.0",
       "typea": "^4.4.5"
    },
    "files": [

@@ -1,17 +1,16 @@
 'use strict';
 
 module.exports = {
-   "components": {
-      "@ioa/koa": {
-         "port": 9800,
-      },
-      "./app": {
-         "suffix": [
-            ".jpg",
-            ".png",
-            ".xml",
-            ".csv"
-         ]
-      },
+   "@ioa/koa": {
+      "port": 9800,
+   },
+   "lib": {
+      // "savePath": "D:/Nodejs/Project/ioa/@ioa-upload/xxxx",
+      "suffixs": [
+         ".jpg",
+         ".png",
+         ".xml",
+         ".csv"
+      ]
    },
 }
