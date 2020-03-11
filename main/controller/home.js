@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-   async test(ctx) {
+  async test(ctx) {
 
-      ctx.body = `
+    ctx.body = `
       <html>
          <head>
             <title>表单、文件上传</title>
@@ -25,10 +25,10 @@ module.exports = {
       </html>
       `
 
-   },
-   async upload(ctx) {
+  },
+  async upload(ctx) {
 
-      ctx.body = ctx.upload;
+    ctx.body = ctx.upload;
 
-   },
+  },
 }
