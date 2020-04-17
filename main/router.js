@@ -2,7 +2,7 @@
 
 const { router, middleware } = require('@app');
 
-const { parser, upload, create, update } = middleware;
+const { parser, upload } = middleware;
 
 router.get('/', "test");
 
