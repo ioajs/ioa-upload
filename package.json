@@ -1,7 +1,7 @@
 {
-   "name": "@ioa/upload",
-   "version": "9.7.1",
-   "description": "ioa文件上传组件",
+   "name": "@ioa/static",
+   "version": "9.8.0",
+   "description": "ioa文件存储组件",
    "scripts": {
       "start": "node index.js",
       "dev": "node index.js",

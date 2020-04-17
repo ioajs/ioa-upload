@@ -6,13 +6,14 @@ module.exports = {
   },
   "lib": {
     // "savePath": "D:/Nodejs/Project/ioa/@ioa-upload/xxxx",
+    "baseHref": "http://127.0.0.1/static",
     "whitelist": [
       ".jpg",
       ".png",
       ".xml",
-      ".csv"
+      ".csv",
+      ".mp4"
     ],
-    "limits": {},
-    "baseUrl": "http://127.0.0.1/static"
+    "limits": {}
   },
 }

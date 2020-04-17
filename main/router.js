@@ -2,8 +2,12 @@
 
 const { router, middleware } = require('@app');
 
-const { upload } = middleware;
+const { parser, upload, create, update } = middleware;
 
-router.get('/', "home.test");
+router.get('/', "test");
 
-router.post('/upload/:category', upload, 'home.upload');
+router.post('/static/user', parser, upload('create'), 'response');
+
+router.put('/static/user', parser, upload('update'), 'response');
+
+// router.delete('/static/user', 'destroy');

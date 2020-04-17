@@ -23,7 +23,7 @@
 
 * `limits` *Object* 文件上传限制，请参照[Busboy](https://github.com/mscdex/busboy#busboy-methods)项目
 
-* `baseUrl` *String* 图片地址前缀
+* `base` *String* 图片地址前缀
 
 #### 默认配置
 
