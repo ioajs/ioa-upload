@@ -4,7 +4,7 @@ const { router, middleware } = require('@app');
 
 const { parser, upload } = middleware;
 
-router.get('/', "test");
+router.get('/', "form");
 
 router.post('/static/user', parser, upload('create'), 'response');
 

@@ -2,20 +2,7 @@
 
 module.exports = async (ctx, next) => {
 
-  let spacePath = '';
-
-  const auth = {
-    role: "admin",
-    id: 1,
-  }
-
-  if (auth.role) {
-    spacePath = `${auth.role}`;
-  }
-
-  if (auth.id) {
-    spacePath = `${spacePath}/${auth.id}`;
-  }
+  let spacePath = 'user';
 
   const { query } = ctx;
 

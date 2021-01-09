@@ -1,11 +1,11 @@
 {
    "name": "@ioa/static",
-   "version": "9.8.0",
+   "version": "9.8.1",
    "description": "ioa文件存储组件",
    "scripts": {
       "start": "node index.js",
       "dev": "node index.js",
-      "test": "jtf -w"
+      "test": "jtf"
    },
    "dependencies": {
       "busboy": "^0.3.1"
@@ -13,9 +13,11 @@
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
-      "@ioa/config": "^9.5.0",
-      "@ioa/koa": "^9.7.3",
-      "ioa": "^9.7.5"
+      "@ioa/config": "^10.0.0",
+      "@ioa/koa": "^9.8.13",
+      "axios": "^0.21.1",
+      "ioa": "^10.0.5",
+      "typea": "^5.2.0"
    },
    "files": [
       "lib"
